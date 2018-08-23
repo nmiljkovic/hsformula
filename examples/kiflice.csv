@@ -1,0 +1,20 @@
+Ime                       ,Kiflice                   ,Količina (g)          ,
+Nemanja                   ,Kiflice sa ukusom pice    ,200                   ,
+Igor                      ,Kiflice sa spanaćem       ,150                   ,
+Igor                      ,Kiflice sa pršutom i sirom,150                   ,
+Vesna                     ,Kiflice sa šunkom i sirom ,1000                  ,
+Vesna                     ,Kiflice sa eurokremom     ,200                   ,
+Nemanja                   ,Kiflice sa eurokremom     ,200                   ,
+                          ,                          ,                      ,
+                          ,                          ,                      ,
+                          ,                          ,                      ,
+                          ,                          ,                      ,
+Naziv                     ,Cena (din/kg)             ,Količina (g)          ,Cena (din)
+Kiflice sa ukusom pice    ,640                       ,"=SUMBY(B2:C10,1,A13)",=C13*B13/1000
+Kiflice sa spanaćem       ,640                       ,"=SUMBY(B2:C10,1,A14)",=C14*B14/1000
+Kiflice sa šunkom i sirom ,640                       ,"=SUMBY(B2:C10,1,A15)",=C15*B15/1000
+Kiflice sa pršutom i sirom,780                       ,"=SUMBY(B2:C10,1,A16)",=C16*B16/1000
+Kiflice sa eurokremom     ,640                       ,"=SUMBY(B2:C10,1,A17)",=C17*B17/1000
+Kiflice sa orasima        ,640                       ,"=SUMBY(B2:C10,1,A18)",=C18*B18/1000
+Kiflice sa aronijom       ,640                       ,"=SUMBY(B2:C10,1,A19)",=C19*B19/1000
+                          ,                          ,Ukupno                ,=SUM(D13:D19)

@@ -1,0 +1,4 @@
+Name             ,RSVP,,            ,
+Nemanja Miljković,YES ,,Count       ,"=COUNT(A2:A)"
+                 ,    ,,Count RSVP  ,"=COUNTIF(B2:B,""YES"")"
+                 ,    ,,Percent RSVP,"=E3/E2*100"

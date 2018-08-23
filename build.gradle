@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'me.nemanjamiljkovic'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+apply plugin: 'antlr'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.commons:commons-csv:1.5'
+    compile 'com.jakewharton.fliptables:fliptables:1.0.2'
+    compile 'info.picocli:picocli:3.5.2'
+    compile 'org.fusesource.jansi:jansi:1.17.1'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    antlr "org.antlr:antlr4:4.7.1"
+}
+
+generateGrammarSource {
+
+    arguments += [
+            "-visitor",
+            "-long-messages",
+            "-package", "me.nemanjamiljkovic.hsformula"
+    ]
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "me.nemanjamiljkovic.hsformula.cli.Main"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
