@@ -41,3 +41,9 @@ jar {
     }
 }
 
+task runKiflice(type: JavaExec) {
+    main = 'me.nemanjamiljkovic.hsformula.cli.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    args = ["examples/kiflice.csv"]
+}
+
