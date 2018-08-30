@@ -17,4 +17,5 @@ Kiflice sa pršutom i sirom,780                       ,"=SUMBY(B2:C10,1,A16)",=C
 Kiflice sa eurokremom     ,640                       ,"=SUMBY(B2:C10,1,A17)",=C17*B17/1000
 Kiflice sa orasima        ,640                       ,"=SUMBY(B2:C10,1,A18)",=C18*B18/1000
 Kiflice sa aronijom       ,640                       ,"=SUMBY(B2:C10,1,A19)",=C19*B19/1000
-                          ,                          ,Ukupno                ,=SUM(D13:D19)
+                          ,                          ,Ukupno grama          ,Ukupno din
+                          ,                          ,=SUM(C13:C19)         ,=SUM(D13:D19)
